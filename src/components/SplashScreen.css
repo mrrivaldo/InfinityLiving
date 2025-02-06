@@ -1,0 +1,29 @@
+#splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* Latar belakang hitam */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.5s ease-in-out; /* Efek fade out */
+}
+
+#splash-screen img {
+  max-width: 25%;
+  height: auto;
+  animation: scale 1s ease-in-out forwards; /* Efek scale */
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0.5); /* Mulai dari ukuran 50% */
+    opacity: 0; /* Mulai dengan transparan */
+  }
+  to {
+    transform: scale(1); /* Kembali ke ukuran normal */
+    opacity: 1; /* Tampil penuh */
+  }}

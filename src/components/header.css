@@ -1,117 +1,224 @@
-/* Styling dasar header */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Terapkan font Poppins secara global */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header Styling */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 50;
-    background-color: rgba(21,21,21,0.3);
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px 20px;
+  height: 100px;
+  margin-bottom: 20px;
+  background-color: rgba(21, 21, 21, 0.65);
+  color: white;
+  font-family: Arial, sans-serif;
+  position: relative;
+  z-index: 1000;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.header.scrolled {
-    background-color: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+/* When hovering over submenu, header background will be white */
+.header.white-bg {
+  background-color: white;
+  color: black;
 }
 
-.container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+/* Adjust text color when hovering over submenu */
+.nav-links li a {
+  color: white;
+  font-size: 15px;
+  transition: color 0.3s;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
 }
 
+.nav-links li a:hover {
+  color: red;
+}
+
+/* Logo Styling */
 .logo {
-    font-size: 20px;
-    font-weight: bold;
+  margin-left: -20px;
 }
 
 .logo img {
-    height: 100px;
+  height: 110px;
 }
 
-/* Navigation */
+/* Navigation Links Styling */
 .nav-links {
-    display: flex;
-    list-style: none;
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
+/* Submenu Styling */
 .nav-item {
-    position: relative;
-    margin: 0 15px;
+  position: relative;
 }
 
-.nav-link {
-    text-decoration: none;
-    color: white; /* Warna default */
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
+/* Submenu Structure */
+.submenu {
+  position: fixed; /* Ensures full width */
+  top: 140px; /* Adjust based on header height */
+  left: 0;
+  width: 100vw; /* Makes it full width */
+  background-color: white;
+  padding: 20px 50px;
+  border-top: 3px solid red;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+
+  /* Smooth hover effect */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-/* Warna link saat dihover */
-.nav-item:hover .nav-link {
-    color: #ff3700;
+.submenu-content {
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* Semua item lain yang tidak dihover berubah menjadi hitam */
-.nav-links:hover .nav-item:not(:hover) .nav-link {
-    color: black;
+.submenu h3 {
+  color: black;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
-/* Jika mouse keluar dari navbar, kembali ke putih */
-.nav-links:not(:hover) .nav-link {
-    color: white;
+#submenu-links {
+  display: grid;
+  gap: 10px;
 }
 
-/* Mega Menu - Full Screen Width */
-.mega-menu {
-    position: fixed;
-    top: 130px;
-    left: 0;
-    width: 100vw;
-    min-height: 300px;
-    background: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
-    transform: translateY(-10px);
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    border-top: 3px solid #ff3700;
+#submenu-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  transition: color 0.3s;
 }
 
-/* Munculkan Mega Menu saat hover */
-.nav-item:hover .mega-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+#submenu-links a:hover {
+  color: red;
 }
 
-/* Isi Mega Menu - Grid Layout */
-.mega-menu ul {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
-    gap: 20px;
-    list-style: none;
-    width: 100%;
-    max-width: 1200px;
+/* Show submenu when hovering over nav item OR submenu */
+.nav-item:hover .submenu,
+.submenu:hover {
+  opacity: 1;
+  visibility: visible;
 }
 
-.mega-menu li {
+/* Adjust the color of the links when header background is white */
+.header.white-bg .nav-links li a {
+  color: black;
+}
+
+.header.white-bg .nav-links li a:hover {
+  color: red;
+}
+
+/* Extras styling */
+.extras {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.stock-price {
+  font-size: 14px;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+
     padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
+  }
 
-.mega-menu li:last-child {
-    border-bottom: none;
-}
+  .logo {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
 
-.mega-menu a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding-left: 20px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li a {
+    font-size: 16px;
+    padding: 10px 0;
+    text-align: left;
+    width: 100%;
+  }
+
+  .nav-item {
+    position: relative;
+    width: 100%;
+  }
+
+  .submenu {
+    top: 20;
+    width: 100%;
+    padding: 10px 20px;
+    border-top: none;
+  }
+
+  .extras {
+    margin-top: 10px;
+    gap: 10px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .hamburger {
     display: block;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .hamburger .bar {
+    background-color: white;
+    height: 4px;
+    width: 25px;
+    margin: 5px 0;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 480px) {
+  .logo img {
+    height: 120px;
+  }
+
+  .stock-price {
+    font-size: 12px;
+  }
+
+  .icon {
+    font-size: 18px;
+  }
+
+  .hamburger .bar {
+    width: 20px;
+  }
 }
