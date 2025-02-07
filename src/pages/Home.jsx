@@ -55,7 +55,7 @@ function Home() {
       behind the scenes content from the people behind our business.
       </p>
 
-      <a href="">Read, Watch, Listen Here</a>
+      <a id="card-link" href="">Read, Watch, Listen Here</a>
       </div>
       
     <div className='card'>
@@ -64,19 +64,19 @@ function Home() {
        economy
       </p>
 
-      <a href="">Read more</a>
+      <a id="card-link" href="">Read more</a>
       </div>
 
     <div className='card'>
     <h2>ArcelorMittal Multi Part Integration® </h2>
       <p>In a rapidly evolving automotive industry, flexibility wins. ArcelorMittal Multi <br/>
       Part Integration® maximises automotive manufacturers’ ability to adapt <br/>
-      through the power of less: less parts, less process, less floor space, less time,<br/>
-      less materials, less CO₂ and less assembly cost. Harness the strength of steel <br/>
+      through the power of less: less parts, less process, less floor space, less time,
+      less materials, less CO₂ and less assembly cost. Harness the strength of steel 
        and the power of less. 
       </p>
 
-      <a href="">Read more</a>
+      <a id="card-link" href="">Learn more</a>
       </div>
 
    </div>

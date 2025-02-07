@@ -14,25 +14,29 @@
   background-position: center;
   width: 100%;
   max-width: 100%;
-  padding: 20px;
+  padding: 15px;
   color: white;
   box-sizing: border-box;
   z-index: 3;
-  height: 40vh;
+  height: 60vh;
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
 }
 
-.card a {
-  text-decoration: none;
-  color: white;
+#card-link{
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .card h2 {
-  font-size: 1.5rem;
+  line-height: 3rem;
+  margin:2rem 0rem;
+  font-size: 2.5rem;
+
 }
 
 .card p {
   font-size: 1rem;
+  margin-bottom: 2rem;
 }
 
 /* Container informasi */
@@ -74,14 +78,16 @@
 
 
 /* Efek underline pada link */
-.info-desc a {
+.info-desc a,
+.card a { /* Tambahkan .card a agar mendapatkan efek yang sama */
   position: relative;
   color: white;
   text-decoration: none;
   font-size: 20px;
 }
 
-.info-desc a::before {
+.info-desc a::before,
+.card a::before {
   content: "";
   position: absolute;
   left: 0;
@@ -89,16 +95,18 @@
   width: 100%;
   height: 2px;
   background: white;
-  transform: scaleX(1);
+  transform: scaleX(1); /* Underline terlihat sejak awal */
   transform-origin: left;
   transition: transform 0.4s ease-in-out;
 }
 
-.info-desc a:hover::before {
-  transform: scaleX(0);
+.info-desc a:hover::before,
+.card a:hover::before {
+  transform: scaleX(0); /* Underline menghilang saat hover */
 }
 
-.info-desc a:hover::after {
+.info-desc a::after,
+.card a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -106,20 +114,18 @@
   width: 100%;
   height: 2px;
   background: white;
-  transform: scaleX(0);
+  transform: scaleX(0); /* Awalnya tidak terlihat */
   transform-origin: left;
-  transition: transform 0.4s ease-in-out;
-  animation: underline-grow 0.8s forwards;
+  transition: transform 1s ease-in-out;
 }
 
-@keyframes underline-grow {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
+.info-desc a:hover::after,
+.card a:hover::after {
+  transform: scaleX(1); /* Underline muncul dari kiri ke kanan saat hover */
 }
+
+
+
 
 /* Container informasi kedua */
 .info-container-2 {

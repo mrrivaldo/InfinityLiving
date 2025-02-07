@@ -13,7 +13,7 @@ function SplashScreen() {
   if (showSplash) {
     return (
       <div id="splash-screen">
-        <img src="public\logo-white.png" alt="Logo Anda" />
+        <img src="/logo-white.png" alt="Logo Anda" />
       </div>
     );
   } else {
