@@ -1,50 +1,104 @@
+/* Base styles for desktop and larger screens */
 .video-container {
-    position: relative;
-    width: 100%;
-    height: 120vh;
-  }
-  
-  .video-container video {
-    position: absolute;
-    top: -175px;
-    left: 0;
-    width: 100%;
-    height: 80%;
-    object-fit: cover;
-    opacity: 0.85;
-  }
-  
-  .video-overlay {
-    position: absolute;
-    top: 30%;
-    left: 10%;
-    transform: translateY(-50%);
-    color: white;
-    text-align: left;
-    z-index: 1;
-  }
-  
-  .video-overlay h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid white;
-    animation: typing 5s steps(40, end) infinite, blink-cursor .75s step-end infinite; /* Hilangkan animation-iteration-count */
-     /* Teks tetap terlihat setelah animasi selesai */
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: -50vh;
+}
 
+.video-container video {
+  position: absolute;
+  top: -175px;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  opacity: 0.85;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+  text-align: left;
+  z-index: 1;
+}
+
+.video-overlay h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0; /* Start hidden */
+  animation: fadeInRight 3s ease-in-out forwards; /* Apply fadeInRight only */
+}
+
+/* Fade-in and move from left to right */
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); /* Start from left */
   }
-  
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End at normal position */
   }
-  
-  @keyframes blink-cursor {
-    from, to { border-color: transparent }
-    50% { border-color: white; }
+}
+
+.video-overlay p {
+  font-size: 1.2em;
+}
+
+/* Responsive styles for mobile */
+@media screen and (max-width: 768px) {
+  .video-container {
+    height: 150vh; /* Adjust height for mobile */
   }
-  
+
+  .video-container video {
+    top: 0; /* Adjust video position for mobile */
+    height: 100%; /* Make video fill the screen height */
+  }
+
+  .video-overlay {
+    top: 25%; /* Adjust text position */
+    left: 5%; /* Slightly decrease left margin for smaller screens */
+    transform: translateY(-50%);
+  }
+
+  .video-overlay h1 {
+    font-size: 2em; /* Reduce font size for mobile */
+    text-align: center; /* Center-align the text on mobile */
+  }
+
   .video-overlay p {
-    font-size: 1.2em;
+    font-size: 1em; /* Reduce font size for paragraph */
   }
+}
+
+@media screen and (max-width: 480px) {
+  .video-container {
+    height: 90vh; /* Adjust for very small screens */
+  }
+
+  .video-container video {
+    top: 0; /* Adjust video position */
+    height: 100%; /* Make the video fill the screen height */
+  }
+
+  .video-overlay {
+    top: 20%; /* Adjust position further down for very small screens */
+    left: 5%; /* Reduce left margin */
+  }
+
+  .video-overlay h1 {
+    font-size: 1.3em; /* Smaller font size for very small screens */
+    text-align: center; /* Keep text centered */
+  }
+
+  .video-overlay p {
+    font-size: 0.9em; /* Smaller font for paragraphs */
+  }
+}

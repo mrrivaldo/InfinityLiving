@@ -1,20 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Video.css';
+import { useTypewriter} from 'react-simple-typewriter';
 
 function Video() {
   const sentences = ['Making Dreams Possible', 'Powered by Imagination', 'Built for Life'];
-
-  const [currentSentence, setCurrentSentence] = useState(sentences[0]);
-  const currentIndex = useRef(0); // Menggunakan useRef untuk melacak index
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      currentIndex.current = (currentIndex.current + 1) % sentences.length;
-      setCurrentSentence(sentences[currentIndex.current]);
-    }, 4000);
-
-    return () => clearInterval(intervalId);
-  }, [sentences]); // Hanya sentences sebagai dependency
+  
+  const [text] = useTypewriter({
+    words: sentences,
+    loop: true,
+    delaySpeed: 2000,
+    typeSpeed: 100,
+    deleteSpeed: 50,
+  });
 
   return (
     <div className="video-container">
@@ -34,8 +31,7 @@ function Video() {
         }}
       />
       <div className="video-overlay">
-        <h1>{currentSentence}</h1>
-        <p></p>
+        <h1 className="fade-to-right">{text}</h1>
       </div>
     </div>
   );

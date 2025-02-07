@@ -9,6 +9,7 @@ function Header() {
       setIsMenuOpen(!isMenuOpen);
     };
 
+    
   return (
     <header
       className={`header ${isHovered ? "white-bg" : ""}`}
@@ -17,7 +18,7 @@ function Header() {
     >
       <div className="logo">
         <img 
-         src={isHovered ? "public/logo-black.png" : "public/logo-white.png"} 
+         src={isHovered ? "/logo-black.png" : "/logo-white.png"} 
         alt="INFINITY LIVING" />
       </div>
       <nav>
@@ -31,8 +32,11 @@ function Header() {
             <a href="#">About</a>
             <div className="submenu">
               <div className="submenu-content">
-                <h3>About</h3>
-              
+                <div className="submenu-left">
+                <h2>About</h2>
+                <p>Meet the world's leading <br/> steel and mining company</p>
+                <a href=""><u>Go to About page</u></a>
+                </div>
                 <div id="submenu-links">
                   <a href="#">Our purpose</a>
                   <a href="#">Our values</a>
@@ -49,7 +53,7 @@ function Header() {
             </div>
           </li>
 
-          {/* Steel Homes */}
+          {/* Climate Action */}
           <li
             className="nav-item"
             onMouseEnter={() => setIsHovered(true)}
@@ -58,8 +62,11 @@ function Header() {
             <a href="#">Climate Action</a>
           <div className="submenu">
               <div className="submenu-content">
-                <h3>Steel Homes </h3>
-             
+              <div className="submenu-left">
+                <h2>Climate Action</h2>
+                <p>Our journey to net-zero <br/> steelmaking</p>
+                <a href=""><u>Go to Climate action page</u></a>
+                </div>
                 <div id="submenu-links">
                   <a href="#">
                   Steel's sustainability credentials </a>
@@ -69,16 +76,40 @@ function Header() {
                   Technology pathways to net-zero steel </a>
                   <a href="#">
                   Decarbonisation technologies </a>
-                  <a href="#">Leadership</a>
-                  <a href="#">Research & Development</a>
-                  <a href="#">Health & Safety</a>
-                  <a href="#">Global reach</a>
-                  <a href="#">Making steel</a>
-                  <a href="#">FAQ</a>
+                  <a href="#">Decarbonisation investment plans</a>
+                  <a href="#">Partnering to drive systems-wide change</a>
+                  <a href="#">XCarb®</a>
+                  <a href="#">Progress, latest news and updates</a>
+                  <a href="#">Climate Action Reports</a>
+                  
                 </div>
               </div>
             </div>
             </li>
+
+           {/* Smarter Future */}
+        <li
+            className="nav-item"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <a href="#">Smarter Future</a>
+          <div className="submenu">
+              <div className="submenu-content">
+              <div className="submenu-left">
+                <h2>Smarter Future</h2>
+                <p>Our journey to net-zero <br/> steelmaking</p>
+                <a href=""><u>Go to Smarter Future page</u></a>
+                </div>
+                <div id="submenu-links">
+                  <a href="#">The Steel Works</a>
+                  <a href="#">The Futurising Podcast</a>
+              
+    
+                </div>
+              </div>
+            </div>
+          </li>
 
             {/* PRODUCTS  */}
             <li
@@ -89,19 +120,48 @@ function Header() {
             <a href="#">Products</a>
             <div className="submenu">
               <div className="submenu-content">
-                <h3>PRODUCTS</h3>
-          
+              <div className="submenu-left">
+                <h2>Products</h2>
+                <p>Our journey to net-zero <br/> steelmaking</p>
+                <a href=""><u>Go to Products page</u></a>
+                </div>
                 <div id="submenu-links">
                   <a href="#">Our purpose</a>
                   <a href="#">Our values</a>
-                  <a href="#">Our culture</a>
-                  <a href="#">Strategy</a>
-                  <a href="#">Leadership</a>
-                  <a href="#">Research & Development</a>
-                  <a href="#">Health & Safety</a>
-                  <a href="#">Global reach</a>
-                  <a href="#">Making steel</a>
-                  <a href="#">FAQ</a>
+                 
+                </div>
+              </div>
+            </div>
+            </li>
+
+        {/* Investors  */}
+        <li
+            className="nav-item"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <a href="#">Investors</a>
+            <div className="submenu">
+              <div className="submenu-content">
+              <div className="submenu-left">
+                <h2>Investors</h2>
+                <p>
+                  Financial results, investor <br/>
+                  resources and upcoming <br/> events
+                </p>
+                <a href=""><u>Go to Investors page</u></a>
+                </div>
+                <div id="submenu-links">
+                  <a href="#">Investment proposition</a>
+                  <a href="#">Results</a>
+                  <a href="#">Presentations</a>
+                  <a href="#">Financial reports</a>
+                  <a href="#">Share monitor</a>
+                  <a href="#">Financial calendar</a>
+                  <a href="#">Equity investors</a>
+                  <a href="#">Fixed income investors</a>
+                  <a href="#">Corporate governance</a>
+                  <a href="#">Contact</a>
                 </div>
               </div>
             </div>
@@ -113,10 +173,18 @@ function Header() {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            <a href="#">Sustainablity</a>
+            <a href="#">Sustainability</a>
             <div className="submenu">
               <div className="submenu-content">
-                <h3>Sustainablity</h3>
+              <div className="submenu-left">
+                <h2>Sustainability</h2>
+                <p>
+                  Our commitment to making <br/>
+                  steel integral to a <br/>sustainable, low-carbon <br/>
+                  economy
+                </p>
+                <a href=""><u>Go to Sustainability page</u></a>
+                </div>
           
                 <div id="submenu-links">
                   <a href="#">Our 10 SD Outcomes</a>
@@ -137,34 +205,29 @@ function Header() {
             onMouseLeave={() => setIsHovered(false)}
           >
             <a href="#">Projects</a>
-            </li>
-
-        {/* Investors  */}
-        <li
-            className="nav-item"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            <a href="#">Investors</a>
             <div className="submenu">
               <div className="submenu-content">
-                <h3>Investors</h3>
-          
+              <div className="submenu-left">
+                <h2>Projects</h2>
+                <p>Our journey to net-zero <br/> steelmaking</p>
+                <a href=""><u>Go to Projects page</u></a>
+                </div>
+            
                 <div id="submenu-links">
-                  <a href="#">Our purpose</a>
-                  <a href="#">Our values</a>
-                  <a href="#">Our culture</a>
-                  <a href="#">Strategy</a>
-                  <a href="#">Leadership</a>
-                  <a href="#">Research & Development</a>
-                  <a href="#">Health & Safety</a>
-                  <a href="#">Global reach</a>
-                  <a href="#">Making steel</a>
-                  <a href="#">FAQ</a>
+                  <a href="#">Rewards and benefits</a>
+                  <a href="#">Career progression</a>
+                  <a href="#">Graduates and students</a>
+                  <a href="#">Experienced professionals</a>
+                  <a href="#">Diverse talent enables smarter steels</a>
+                  <a href="#">Frequently asked questions</a>
+                  <a href="#">Search our jobs</a>
+                  
                 </div>
               </div>
             </div>
             </li>
+
+        
 
         {/*Careers */}
         <li
@@ -175,7 +238,14 @@ function Header() {
             <a href="#">Careers</a>
             <div className="submenu">
               <div className="submenu-content">
-                <h3>Careers</h3>
+              <div className="submenu-left">
+                <h2>Careers</h2>
+                <p>
+                  Latest news and <br/>
+                  announcements
+                </p>
+                <a href=""><u>Go to Careers page</u></a>
+                </div>
             
                 <div id="submenu-links">
                   <a href="#">Rewards and benefits</a>
@@ -199,7 +269,11 @@ function Header() {
             <a href="#">Media</a>
           <div className="submenu">
               <div className="submenu-content">
-                <h3>Media</h3>
+              <div className="submenu-left">
+                <h2>Media</h2>
+                <p>Our journey to net-zero <br/> steelmaking</p>
+                <a href=""><u>Go to Media page</u></a>
+                </div>
           
                 <div id="submenu-links">
                   <a href="#">News articles</a>
@@ -210,26 +284,7 @@ function Header() {
               </div>
             </div>
           </li>
-        {/* Smarter Future */}
-        <li
-            className="nav-item"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            <a href="#">Smarter Future</a>
-          <div className="submenu">
-              <div className="submenu-content">
-                <h3>Smarter Future</h3>
-          
-                <div id="submenu-links">
-                  <a href="#">The Steel Works</a>
-                  <a href="#">The Futurising Podcast</a>
-              
-    
-                </div>
-              </div>
-            </div>
-          </li>
+       
         </ul>
 
          {/* Hamburger Icon */}
