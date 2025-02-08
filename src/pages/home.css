@@ -22,16 +22,15 @@
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
 }
 
-#card-link{
+#card-link {
   font-weight: bold;
   font-size: 18px;
 }
 
 .card h2 {
   line-height: 3rem;
-  margin:2rem 0rem;
+  margin: 2rem 0rem;
   font-size: 2.5rem;
-
 }
 
 .card p {
@@ -76,10 +75,10 @@
   margin-bottom: 40px;
 }
 
-
 /* Efek underline pada link */
 .info-desc a,
-.card a { /* Tambahkan .card a agar mendapatkan efek yang sama */
+.card a {
+  /* Tambahkan .card a agar mendapatkan efek yang sama */
   position: relative;
   color: white;
   text-decoration: none;
@@ -124,9 +123,6 @@
   transform: scaleX(1); /* Underline muncul dari kiri ke kanan saat hover */
 }
 
-
-
-
 /* Container informasi kedua */
 .info-container-2 {
   display: flex;
@@ -152,7 +148,6 @@
   margin: 10px 0;
 }
 
-
 /* Layout utama */
 .build-section {
   display: flex;
@@ -167,7 +162,7 @@
 .build-image {
   width: 80%;
   height: 100%;
-  background: url("/man.webp") no-repeat center center/cover;
+  background: url("/sectioncareer.webp") no-repeat center center/cover;
   position: relative;
 }
 
@@ -245,19 +240,17 @@
   justify-self: center;
   margin-top: 4rem;
   width: 80%;
-  
 }
-.custom-button-news{
+.custom-button-news {
   border-color: #ff3700 !important;
   color: black !important;
 }
-.custom-button-news:hover{
-  color:white !important;
+.custom-button-news:hover {
+  color: white !important;
 }
 
-
-.report-container{
-  background-color:#0070c0 ;
+.report-container {
+  background-color: #0070c0;
   color: white;
   display: flex;
   justify-content: center;
@@ -266,7 +259,7 @@
   padding: 2rem;
 }
 
-.report-info h1{
+.report-info h1 {
   font-size: 40px;
   margin-bottom: 2rem;
 }

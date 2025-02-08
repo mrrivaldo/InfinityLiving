@@ -1,0 +1,190 @@
+body, html {
+  overflow-x: hidden;
+}
+
+
+.hero-section {
+    position: relative; /* Untuk memungkinkan positioning konten di atas gambar */
+    width: 100%;
+    height: 700px; /* Tinggi hero section (bisa disesuaikan) */
+     /* Mencegah gambar meluap dari container */
+  }
+  
+  .hero-section img {
+    position: absolute;
+    top: -160px;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    object-fit: cover; /* Memastikan gambar menutupi seluruh area hero section */
+    filter: brightness(0.4); /* Mengatur tingkat kegelapan gambar (0.0 - 1.0) */
+  }
+  
+  .hero-content {
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    transform: translateY(-50%); /* Memposisikan teks di tengah gambar */
+    color: white; /* Warna teks */
+    text-align: left; /* Rata kiri teks */
+  padding-left: 20px;
+
+     /* Rata tengah teks */
+  }
+  
+  .hero-content h1 {
+    font-size: 3em; /* Ukuran teks judul (bisa disesuaikan) */
+    margin: 0;}
+
+ .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 2 kolom */
+        width: 80vw;
+  margin: 0 auto; /* Untuk membuat grid container berada di tengah halaman */
+        grid-gap: 20px; /* Spasi antar grid item */
+        padding: 20px;
+      }
+      
+      .grid-item {
+        border: 1px solid #ccc; /* Garis tepi (opsional) */
+        padding: 20px;
+        text-align: center; /* Teks rata tengah */
+        height: 200px; /* Tinggi kotak (bisa disesuaikan) */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Vertikal tengah */
+    align-items: center;
+        
+      }
+      
+      .grid-number {
+        font-size: 2em; /* Ukuran angka */
+        font-weight: bold;
+        margin: 10px 0; /* Spasi atas bawah angka */
+        transition: transform 0.5s ease-in-out;
+      }
+
+     
+      
+      .grid-item:hover .grid-number {
+        transform: scale(1.4); /* Efek scale saat hover */
+        transform-origin: center;
+      }
+  
+      .grid-item .grid-number {
+        font-size: 4em; /* Ukuran font (bisa disesuaikan) */
+        color: #333; /* Warna teks (bisa disesuaikan) */
+      }
+      
+      .grid-item:hover .grid-number {
+        color: #ff6a00; /* Warna teks saat hover (contoh) */
+      }
+
+      .dual-grid-section {
+  padding: 40px;
+}
+
+/*swipwe*/
+
+.swiper-container {
+  width: 100%;
+  height: 600px; /* Sesuaikan tinggi swiper */
+  position: relative; /* Untuk memposisikan navigasi dan pagination */
+  background-color: rgb(61, 61, 61); /* Warna latar belakang container */
+  padding: 20px; /* Padding di dalam container */
+  overflow-x: hidden;
+}
+
+.swiper-slide {
+  display: flex; /* Mengatur slide menjadi flex container */
+}
+
+.slide-content {
+  display: flex;
+  width: 100%; /* Memastikan konten slide memenuhi lebar slide */
+  height: 100%;
+}
+
+.slide-image {
+  width: 50%; /* 50% lebar untuk gambar */
+  overflow: hidden;
+}
+
+.slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-text {
+  width: 50%; /* 50% lebar untuk teks */
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.slide-text h2 {
+  margin-bottom: 10px;
+}
+
+.slide-text p {
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Warna tombol (contoh) */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Styling untuk navigasi dan pagination swiper */
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 10; /* Di atas konten slide */
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #fff; /* Warna bullet tidak aktif */
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: #007bff; /* Warna bullet aktif */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
+}

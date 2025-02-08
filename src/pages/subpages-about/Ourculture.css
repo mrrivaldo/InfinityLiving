@@ -1,0 +1,28 @@
+.article-section {
+    display: flex;
+    justify-content: center; /* Membuat container berada di tengah layar */
+  }
+  
+  .article-content {
+    max-width: 960px; /* Lebar maksimum container */
+    padding: 20px;
+  }
+p {
+    text-align: justify; /* Justify the text */
+    line-height: 1.6; /* Add line spacing */
+    letter-spacing: 0.02em; /* Add letter spacing */
+    margin-bottom: 1rem; /* Add spacing between paragraphs */
+  }
+  
+  h2 {
+      margin-bottom: 0.5rem; /* Space below h2 */
+  }
+  
+  a {
+      color: rgb(255, 77, 0); /* Inherit color from parent */
+      /* Remove underline */
+  }
+  
+  a:hover {
+      text-decoration: underline; /* Add underline on hover */
+  }
