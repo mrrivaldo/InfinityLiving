@@ -54,7 +54,7 @@ function Home() {
       <section>
         <div className="card-container">
           <div className="card">
-            <h2>Test</h2>
+            <h2>Testoo</h2>
             <p>
               Purpose-led smarter steel thinking, insight and podcasts for
               people and <br />
