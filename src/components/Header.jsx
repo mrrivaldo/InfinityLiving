@@ -1,18 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./header.css";
 import { NavLink } from "react-router";
 
 function Header() {
   const [isHovered, setIsHovered] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // state for toggling hamburger menu
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrollingDown, setIsScrollingDown] = useState(false);
+  let lastScrollY = window.scrollY;
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        // Scrolling ke bawah
+        setIsScrollingDown(true);
+      } else {
+        // Scrolling ke atas
+        setIsScrollingDown(false);
+      }
+      lastScrollY = window.scrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header
-      className={`header ${isHovered ? "white-bg" : ""}`}
+      className={`header ${isHovered ? "white-bg" : ""} ${
+        isScrollingDown ? "hide-header" : ""
+      }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -65,7 +87,7 @@ function Header() {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            <a href="#">Climate Action</a>
+            <NavLink to="/ClimateAction">Climate Action</NavLink>
             <div className="submenu">
               <div className="submenu-content">
                 <div className="submenu-left">
@@ -98,7 +120,7 @@ function Header() {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            <a href="#">Smarter Future</a>
+            <NavLink to="/SmarterFuture">Smarter Future</NavLink>
             <div className="submenu">
               <div className="submenu-content">
                 <div className="submenu-left">
@@ -124,7 +146,7 @@ function Header() {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            <a href="#">Products</a>
+            <NavLink to="/Products">Products</NavLink>
             <div className="submenu">
               <div className="submenu-content">
                 <div className="submenu-left">
@@ -150,7 +172,7 @@ function Header() {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            <a href="#">Investors</a>
+            <NavLink to="/Investors">Investors</NavLink>
             <div className="submenu">
               <div className="submenu-content">
                 <div className="submenu-left">
@@ -185,7 +207,7 @@ function Header() {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            <a href="#">Sustainability</a>
+            <NavLink to="/Sustainability">Sustainability</NavLink>
             <div className="submenu">
               <div className="submenu-content">
                 <div className="submenu-left">
@@ -218,7 +240,7 @@ function Header() {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            <a href="#">Projects</a>
+            <NavLink to="Projects">Projects</NavLink>
             <div className="submenu">
               <div className="submenu-content">
                 <div className="submenu-left">
@@ -250,7 +272,7 @@ function Header() {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            <a href="#">Careers</a>
+            <NavLink to="Careers">Careers</NavLink>
             <div className="submenu">
               <div className="submenu-content">
                 <div className="submenu-left">
@@ -282,7 +304,7 @@ function Header() {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            <a href="#">Media</a>
+            <NavLink to="Media">Media</NavLink>
             <div className="submenu">
               <div className="submenu-content">
                 <div className="submenu-left">

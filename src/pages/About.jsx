@@ -3,36 +3,54 @@ import Header from "../components/Header";
 import "./about.css";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
+import DynamicSwiper from "../components/DynamicSwiper";
+import HeroImage from "../components/HeroImage";
 
 function About() {
-  useEffect(() => {
-    const swiper = new Swiper(".swiper-container", {
-      // Konfigurasi swiper (opsional)
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
+  const slidesData = [
+    {
+      image: "public/dummy.jpg",
+      title: "Judul Konten 1",
+      description: "Deskripsi konten 1 di sini.",
+      link: "/media",
+    },
+    {
+      image: "public/dummy2.jpg",
+      title: "Judul Konten 2",
+      description: "Deskripsi konten 2 di sini.",
+      link: "/media",
+    },
+    {
+      image: "public/dummy.jpg",
+      title: "Judul Konten 3",
+      description: "Deskripsi konten 3 di sini.",
+      link: "/media",
+    },
+    {
+      image: "public/dummy.jpg",
+      title: "",
+      description: "",
+      link: "",
+    },
+  ];
 
-    return () => {
-      swiper.destroy(); // Hancurkan swiper saat komponen di-unmount
-    };
-  }, []);
   return (
     <div>
       <Header />
-      <div class="hero-section">
+      {/* <div class="hero-section">
         <img src="public\heroour.jpg" alt="Gambar Hero" />
         <div class="hero-content">
           <h1>
             Smarter steels for <br></br>people and planet
           </h1>
         </div>
-      </div>
+      </div> */}
+      <HeroImage
+        title="Smarter steels for people<br>and planet"
+        subtitle=""
+        breadcrumb={["Homepage", ""]}
+        backgroundImage="/sci.jpg"
+      />
 
       <section class="article-section">
         <div class="article-content">
@@ -150,50 +168,8 @@ function About() {
         </div>
       </div>
 
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="slide-content">
-              <img src="public\sci.jpg" alt="Gambar 1" />
-              <div class="slide-text">
-                <h2>Judul Konten 1</h2>
-                <p>Deskripsi konten 1 di sini.</p>
-                <a href="/media" class="button">
-                  Read more
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="slide-content">
-              <img src="public\sci.jpg" alt="Gambar 2" />
-              <div class="slide-text">
-                <h2>Judul Konten 2</h2>
-                <p>Deskripsi konten 2 di sini.</p>
-                <a href="/media" class="button">
-                  Read more
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="slide-content">
-              <img src="gambar2.jpg" alt="Gambar 2" />
-              <div class="slide-text">
-                <h2>Judul Konten 2</h2>
-                <p>Deskripsi konten 2 di sini.</p>
-                <a href="/media" class="button">
-                  Read more
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
+      {/* <DynamicSwiper /> */}
+      <DynamicSwiper slides={slidesData} />
     </div>
   );
 }

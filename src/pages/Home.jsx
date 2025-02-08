@@ -4,6 +4,7 @@ import Video from "../components/Video";
 import "./home.css";
 import News from "../components/News";
 import Button from "../components/Button";
+import Footer from "../components/Footer";
 function Home() {
   const newsItems = [
     {
@@ -192,6 +193,8 @@ function Home() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </>
   );
 }

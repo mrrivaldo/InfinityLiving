@@ -1,31 +1,37 @@
-/* // HeroImage.css */
 .hero-container {
-  background-color: black;
+  position: relative;
+  width: 100%;
+  height: 700px; /* Sesuaikan tinggi */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   color: white;
-  padding: 20rem 20rem 5rem 20rem;
   text-align: left;
-  height: 40vh;
-  margin-top: -20vh;
-  
+  overflow: hidden;
 }
 
-.breadcrumb {
-  font-size: 14px;
-  color: white;
-  margin-bottom: 10px;
+.hero-left {
+  margin-left: 20rem;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%); /* Membuat gambar lebih gelap */
+  z-index: -1;
+}
+
+.breadcrumb,
+.hero-text {
+  position: relative;
+  z-index: 1; /* Pastikan teks tetap di atas gambar */
 }
 
 .hero-title {
-  font-size: 54px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.hero-subtitle {
-  font-size: 24px;
-  margin: 10px 0 0;
-}
-
-.hero-text{
-    width: 40vw;
+  font-size: 3.5rem;
 }

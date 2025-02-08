@@ -4,6 +4,10 @@ import HeroImage from "../../components/HeroImage";
 import "./ourPurpose.css";
 
 import DynamicSwiper from "../../components/DynamicSwiper";
+
+import Footer from "../../components/Footer";
+
+import Spacer from "../../components/Spacer";
 function OurPurpose() {
   const slidesData = [
     {
@@ -35,9 +39,10 @@ function OurPurpose() {
     <>
       <Header />
       <HeroImage
-        title="Our purpose: Smarter steels for people and planet"
+        title="Our purpose: Smarter<br>steels for people and<br>planet"
         subtitle=""
         breadcrumb={["Homepage", "About"]}
+        backgroundImage="/black.jpg"
       />
       <section>
         <div className="purpose-container">
@@ -94,6 +99,9 @@ function OurPurpose() {
 
       {/* <DynamicSwiper /> */}
       <DynamicSwiper slides={slidesData} />
+      <Spacer height="60px" />
+      {/* Footer */}
+      <Footer />
     </>
   );
 }

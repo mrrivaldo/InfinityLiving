@@ -16,7 +16,7 @@ function App() {
       <SplashScreen />
       <Router>
         <Routes>
-          <Route path="/" element={<About />} />
+          <Route path="/" element={<OurPurpose />} />
           {/* <Route path="/" element={<Home />} /> */}
           {/* <Route path="/" element={<Supplier />} /> */}
         </Routes>
