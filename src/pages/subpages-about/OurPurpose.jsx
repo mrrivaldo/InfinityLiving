@@ -2,12 +2,10 @@ import React from "react";
 import Header from "../../components/Header";
 import HeroImage from "../../components/HeroImage";
 import "./ourPurpose.css";
-
 import DynamicSwiper from "../../components/DynamicSwiper";
-
 import Footer from "../../components/Footer";
-
 import Spacer from "../../components/Spacer";
+import OurGrid from "../../components/OurGrid";
 function OurPurpose() {
   const slidesData = [
     {
@@ -15,24 +13,51 @@ function OurPurpose() {
       title: "Judul Konten 1",
       description: "Deskripsi konten 1 di sini.",
       link: "/media",
+      buttonText: "Test",
     },
     {
       image: "public/dummy2.jpg",
       title: "Judul Konten 2",
       description: "Deskripsi konten 2 di sini.",
       link: "/media",
+      buttonText: "Test2",
     },
     {
       image: "public/dummy.jpg",
       title: "Judul Konten 3",
       description: "Deskripsi konten 3 di sini.",
       link: "/media",
+      buttonText: "Test3",
+    },
+  ];
+
+  const gridData = [
+    { type: "image", src: "/dummy.jpg", alt: "Meeting" },
+    { type: "text", className: "large", title: "Our purpose", number: "1" },
+    { type: "image", src: "/dummy2.jpg", alt: "Business Team" },
+    {
+      type: "text",
+      subtitle: "OUR PURPOSE",
+      title: "Make Dreams Possible",
+      description: "For everyone, everywhere, every day.",
     },
     {
-      image: "public/dummy.jpg",
-      title: "",
-      description: "",
-      link: "",
+      type: "text",
+      title: "We make impact at scale.",
+      description:
+        "We bring speed, clarity, and purpose in solving more challenges. Together, we unlock new possibilities that fuel human ambition.",
+    },
+    {
+      type: "text",
+      title: "We are global.",
+      description:
+        "We leverage reach, opportunities, and talent to drive innovations that empower people and organizations worldwide.",
+    },
+    {
+      type: "text",
+      title: "We are relentless.",
+      description:
+        "For more than 200 years, we’ve been an unstoppable force, continuously evolving and setting new industry standards.",
     },
   ];
   return (
@@ -100,6 +125,10 @@ function OurPurpose() {
       {/* <DynamicSwiper /> */}
       <DynamicSwiper slides={slidesData} />
       <Spacer height="60px" />
+
+      {/* Our Grid */}
+      <OurGrid data={gridData} />
+
       {/* Footer */}
       <Footer />
     </>

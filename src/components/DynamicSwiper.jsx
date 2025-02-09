@@ -1,23 +1,27 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
+import "./dynamicSwiper.css";
 import "swiper/css/pagination";
-import "./test.css";
+import { Pagination } from "swiper/modules";
+import Button from "./Button";
 
 const DynamicSwiper = ({ slides }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="swiper-wrapper">
-      {/* Bagian Gambar (Swiper) */}
+    <div className="swiper-container-wrapper">
+      {/* Bagian Swiper (Gambar) */}
       <Swiper
-        modules={[Pagination, Navigation]}
-        navigation
-        pagination={{ clickable: true }}
-        slidesPerView={1.5}
+        pagination={{
+          clickable: true,
+          dynamicBullets: false, // Pastikan tidak menggunakan dynamicBullets agar bullet tetap terlihat
+        }}
+        modules={[Pagination]}
+        slidesPerView={1.1}
         spaceBetween={20}
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+        autoplay={{ delay: 5000, disableOnInteraction: false }} // Autoplay dengan delay 3 detik
         className="swiper-container"
       >
         {slides.map((slide, index) => (
@@ -27,13 +31,11 @@ const DynamicSwiper = ({ slides }) => {
         ))}
       </Swiper>
 
-      {/* Bagian Deskripsi (Tetap di tempatnya) */}
+      {/* Bagian Deskripsi */}
       <div className="slide-description">
         <h2>{slides[activeIndex]?.title}</h2>
         <p>{slides[activeIndex]?.description}</p>
-        <a href={slides[activeIndex]?.link} className="button">
-          Read more
-        </a>
+        <Button text={slides[activeIndex]?.buttonText || "Learn More"} />
       </div>
     </div>
   );

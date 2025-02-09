@@ -1,104 +1,106 @@
-/*swipwe*/
-
-.swiper-container {
+/* Wrapper utama */
+.swiper-container-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 600px; /* Sesuaikan tinggi swiper */
-  position: relative; /* Untuk memposisikan navigasi dan pagination */
-  background-color: rgb(61, 61, 61); /* Warna latar belakang container */
-  padding: 20px; /* Padding di dalam container */
-  overflow-x: hidden;
+  margin: auto;
+  gap: 40px;
+  background: #333;
+  padding: 5rem 0rem;
+}
+
+/* Bagian Swiper */
+.swiper-container {
+  width: 60%;
+  margin-left: 0rem;
 }
 
 .swiper-slide {
-  display: flex; /* Mengatur slide menjadi flex container */
-}
-
-.slide-content {
   display: flex;
-  width: 100%; /* Memastikan konten slide memenuhi lebar slide */
-  height: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .slide-image {
-  width: 50%; /* 50% lebar untuk gambar */
-  overflow: hidden;
-}
-
-.slide-image img {
   width: 100%;
-  height: 100%;
+  height: 400px;
   object-fit: cover;
 }
 
-.slide-text {
-  width: 50%; /* 50% lebar untuk teks */
-  display: flex;
-  color: #fff;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px;
-}
-
-.slide-text h2 {
-  margin-bottom: 10px;
-}
-
-.slide-text p {
-  margin-bottom: 20px;
-}
-
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff; /* Warna tombol (contoh) */
+/* Bagian Deskripsi */
+.slide-description {
+  width: 40%;
   color: white;
-  text-decoration: none;
-  border-radius: 5px;
+  padding: 20px;
+  text-align: left;
+  z-index: 1;
 }
 
-/* Styling untuk navigasi dan pagination swiper */
+.slide-description h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.slide-description p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
 .swiper-pagination {
   position: absolute;
   bottom: 10px;
-  left: 0;
-  width: 100%;
   display: flex;
   justify-content: center;
-  z-index: 10; /* Di atas konten slide */
+  align-items: center;
+  gap: 1rem;
+  z-index: 10;
 }
 
+/* Styling untuk bullet pagination */
 .swiper-pagination-bullet {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ) !important; /* Ubah warna bullet ke putih transparan */
   width: 10px;
   height: 10px;
-  margin: 0 5px;
   border-radius: 50%;
-  background-color: #fff; /* Warna bullet tidak aktif */
-  opacity: 0.5;
-  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
 }
 
+/* Bullet aktif dengan efek animasi loading */
 .swiper-pagination-bullet-active {
-  opacity: 1;
-  background-color: #007bff; /* Warna bullet aktif */
+  background-color: white !important; /* Ubah warna bullet aktif ke putih */
+  transform: scale(1.3);
 }
 
-.swiper-button-prev,
-.swiper-button-next {
+/* Efek loading untuk bullet aktif */
+.swiper-pagination-bullet-active::before {
+  content: "";
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  padding: 10px 20px;
-  background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
-  color: #fff;
-  border: none;
-  cursor: pointer;
+  top: -4px;
+  left: -4px;
+  width: 13px;
+  height: 13px;
+  border: 2px solid white;
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  animation: spin 3s linear infinite;
 }
 
-.swiper-button-prev {
-  left: 10px;
-}
-
-.swiper-button-next {
-  right: 10px;
+/* Animasi loading (spin) */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

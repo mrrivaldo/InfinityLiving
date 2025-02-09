@@ -5,6 +5,8 @@ import "./home.css";
 import News from "../components/News";
 import Button from "../components/Button";
 import Footer from "../components/Footer";
+import BackToTop from "../components/BackToTop";
+import Spacer from "../components/Spacer";
 function Home() {
   const newsItems = [
     {
@@ -194,6 +196,7 @@ function Home() {
         </div>
       </section>
 
+      <BackToTop />
       <Footer />
     </>
   );

@@ -78,11 +78,13 @@
 /* Efek underline pada link */
 .info-desc a,
 .card a {
-  /* Tambahkan .card a agar mendapatkan efek yang sama */
   position: relative;
   color: white;
   text-decoration: none;
   font-size: 20px;
+  display: inline-block;
+  white-space: nowrap; /* Pastikan teks tidak terpotong */
+  padding-bottom: 4px; /* Ruang untuk underline */
 }
 
 .info-desc a::before,
@@ -94,14 +96,14 @@
   width: 100%;
   height: 2px;
   background: white;
+  transform-origin: right;
   transform: scaleX(1); /* Underline terlihat sejak awal */
-  transform-origin: left;
-  transition: transform 0.4s ease-in-out;
+  /* transition: transform 0.2s ease-in-out; */
 }
 
 .info-desc a:hover::before,
 .card a:hover::before {
-  transform: scaleX(0); /* Underline menghilang saat hover */
+  transform: scaleX(0); /* Menghilang dari kanan ke kiri */
 }
 
 .info-desc a::after,
@@ -110,17 +112,20 @@
   position: absolute;
   left: 0;
   bottom: -2px;
-  width: 100%;
+  width: 0;
   height: 2px;
   background: white;
-  transform: scaleX(0); /* Awalnya tidak terlihat */
   transform-origin: left;
-  transition: transform 1s ease-in-out;
+  transition: width 0.8s ease-in-out;
 }
 
 .info-desc a:hover::after,
 .card a:hover::after {
-  transform: scaleX(1); /* Underline muncul dari kiri ke kanan saat hover */
+  width: 100%; /* Underline muncul sepanjang teks dari kiri ke kanan */
+}
+
+.info-desc a:hover {
+  text-decoration: none;
 }
 
 /* Container informasi kedua */
@@ -197,6 +202,10 @@
   font-size: 24px;
 }
 
+.build-button:hover {
+  text-decoration: none;
+}
+
 /* Card putih di sisa kanan */
 .build-contact {
   width: 30%;
@@ -232,6 +241,10 @@
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
+}
+
+.contact-button:hover {
+  text-decoration: none;
 }
 
 .news-container {

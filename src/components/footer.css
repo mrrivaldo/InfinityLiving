@@ -1,21 +1,22 @@
 .footer {
   background-color: #333;
   color: #fff;
-  padding: 7rem 0rem 7rem 0rem;
+  padding: 7rem 0;
   text-align: center;
 }
 
 .footer-container {
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
   justify-content: center;
   gap: 20px;
 }
+
 .subscribe {
   justify-items: start;
   margin-right: 5rem;
 }
+
 .subscribe h3 {
   margin: 0px 0px -2rem 0px;
   font-size: 24px;
@@ -23,22 +24,57 @@
 
 .links {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
-  grid-template-rows: repeat(
+  grid-template-columns: repeat(
     3,
     auto
-  ); /* Creates 3 rows, automatically adjusted */
-  gap: 10px;
+  ); /* Ukuran kolom mengikuti panjang teks */
+  grid-template-rows: repeat(3, auto);
+  gap: 1rem 5rem;
   justify-content: center;
 }
 
 .links a {
+  position: relative;
   color: #fff;
   text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
+  width: max-content; /* Pastikan lebar elemen hanya sepanjang teks */
 }
 
 .links a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+}
+
+.links a::before,
+.links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20px;
+  height: 2px;
+  background: white;
+}
+
+.links a::before {
+  width: 100%;
+  transform: scaleX(1);
+  transform-origin: right;
+  /* transition: transform 0.1s ease-in-out; */
+}
+
+.links a:hover::before {
+  transform: scaleX(0); /* Menghilang dari kanan ke kiri */
+}
+
+.links a::after {
+  width: 0; /* Awalnya tidak terlihat */
+  transform-origin: left;
+  transition: width 1s ease-in-out;
+}
+
+.links a:hover::after {
+  width: 100%; /* Underline muncul sepanjang teks */
 }
 
 .logos img {
@@ -53,8 +89,9 @@
 .social-icons {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1rem;
   font-size: 20px;
+  margin-left: 10rem;
 }
 
 .social-icons svg {

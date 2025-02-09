@@ -3,7 +3,7 @@ import "./header.css";
 import { NavLink } from "react-router";
 
 function Header() {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isNavHovered, setIsNavHovered] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrollingDown, setIsScrollingDown] = useState(false);
   let lastScrollY = window.scrollY;
@@ -15,10 +15,8 @@ function Header() {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > lastScrollY) {
-        // Scrolling ke bawah
         setIsScrollingDown(true);
       } else {
-        // Scrolling ke atas
         setIsScrollingDown(false);
       }
       lastScrollY = window.scrollY;
@@ -32,25 +30,22 @@ function Header() {
 
   return (
     <header
-      className={`header ${isHovered ? "white-bg" : ""} ${
+      className={`header ${isNavHovered ? "white-bg" : ""} ${
         isScrollingDown ? "hide-header" : ""
       }`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       <div className="logo">
         <img
-          src={isHovered ? "/logo-black.png" : "/logo-white.png"}
+          src={isNavHovered ? "/logo-black.png" : "/logo-white.png"}
           alt="INFINITY LIVING"
         />
       </div>
       <nav>
         <ul className={`nav-links ${isMenuOpen ? "open" : ""}`}>
-          {/* ABOUT */}
           <li
             className="nav-item"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            onMouseEnter={() => setIsNavHovered(true)}
+            onMouseLeave={() => setIsNavHovered(false)}
           >
             <NavLink to="/About">About</NavLink>
             <div className="submenu">
@@ -84,8 +79,8 @@ function Header() {
           {/* Climate Action */}
           <li
             className="nav-item"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            onMouseEnter={() => setIsNavHovered(true)}
+            onMouseLeave={() => setIsNavHovered(false)}
           >
             <NavLink to="/ClimateAction">Climate Action</NavLink>
             <div className="submenu">
@@ -117,8 +112,8 @@ function Header() {
           {/* Smarter Future */}
           <li
             className="nav-item"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            onMouseEnter={() => setIsNavHovered(true)}
+            onMouseLeave={() => setIsNavHovered(false)}
           >
             <NavLink to="/SmarterFuture">Smarter Future</NavLink>
             <div className="submenu">
@@ -143,8 +138,8 @@ function Header() {
           {/* PRODUCTS  */}
           <li
             className="nav-item"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            onMouseEnter={() => setIsNavHovered(true)}
+            onMouseLeave={() => setIsNavHovered(false)}
           >
             <NavLink to="/Products">Products</NavLink>
             <div className="submenu">
@@ -169,8 +164,8 @@ function Header() {
           {/* Investors  */}
           <li
             className="nav-item"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            onMouseEnter={() => setIsNavHovered(true)}
+            onMouseLeave={() => setIsNavHovered(false)}
           >
             <NavLink to="/Investors">Investors</NavLink>
             <div className="submenu">
@@ -204,8 +199,8 @@ function Header() {
           {/* Sustainablity */}
           <li
             className="nav-item"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            onMouseEnter={() => setIsNavHovered(true)}
+            onMouseLeave={() => setIsNavHovered(false)}
           >
             <NavLink to="/Sustainability">Sustainability</NavLink>
             <div className="submenu">
@@ -237,8 +232,8 @@ function Header() {
           {/* Projects  */}
           <li
             className="nav-item"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            onMouseEnter={() => setIsNavHovered(true)}
+            onMouseLeave={() => setIsNavHovered(false)}
           >
             <NavLink to="Projects">Projects</NavLink>
             <div className="submenu">
@@ -269,8 +264,8 @@ function Header() {
           {/*Careers */}
           <li
             className="nav-item"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            onMouseEnter={() => setIsNavHovered(true)}
+            onMouseLeave={() => setIsNavHovered(false)}
           >
             <NavLink to="Careers">Careers</NavLink>
             <div className="submenu">
@@ -301,8 +296,8 @@ function Header() {
           {/*Media */}
           <li
             className="nav-item"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            onMouseEnter={() => setIsNavHovered(true)}
+            onMouseLeave={() => setIsNavHovered(false)}
           >
             <NavLink to="Media">Media</NavLink>
             <div className="submenu">

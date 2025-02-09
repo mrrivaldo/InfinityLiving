@@ -5,6 +5,8 @@ import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import DynamicSwiper from "../components/DynamicSwiper";
 import HeroImage from "../components/HeroImage";
+import Footer from "../components/Footer";
+import BackToTop from "../components/BackToTop";
 
 function About() {
   const slidesData = [
@@ -170,6 +172,8 @@ function About() {
 
       {/* <DynamicSwiper /> */}
       <DynamicSwiper slides={slidesData} />
+      <BackToTop />
+      <Footer />
     </div>
   );
 }

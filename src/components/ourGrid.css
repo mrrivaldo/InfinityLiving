@@ -1,0 +1,66 @@
+.our-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    minmax(0, 1fr)
+  ); /* Pastikan kolom tidak melebihi grid */
+  grid-auto-rows: min-content; /* Atur tinggi berdasarkan isi */
+  gap: 20px;
+  padding: 40px;
+  background-color: #f9f9f9;
+  align-items: start;
+}
+
+.grid-item {
+  padding: 20px;
+  overflow: hidden; /* Mencegah konten keluar dari grid */
+  height: 50vh;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  max-width: 100%; /* Hindari gambar melebihi grid */
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: contain; /* Memastikan gambar tetap proporsional */
+}
+
+.text {
+  font-family: "Georgia", serif;
+  color: #333;
+}
+
+.text.large {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.text h1 {
+  font-size: 100px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.text h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.text p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .our-grid {
+    grid-template-columns: 1fr;
+  }
+}
