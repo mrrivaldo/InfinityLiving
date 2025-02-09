@@ -8,17 +8,20 @@
   gap: 20px;
   padding: 40px;
   background-color: #f9f9f9;
+  /* border: none; */
   align-items: start;
 }
 
 .grid-item {
+  /* border: none; */
   padding: 20px;
   overflow: hidden; /* Mencegah konten keluar dari grid */
-  height: 50vh;
+  height: 50vh !important;
 }
 
 .image {
   display: flex;
+  padding: 0px;
   justify-content: center;
   align-items: center;
 }
@@ -33,6 +36,7 @@
 
 .text {
   font-family: "Georgia", serif;
+  padding: 0px;
   color: #333;
 }
 
