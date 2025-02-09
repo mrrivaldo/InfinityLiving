@@ -57,7 +57,7 @@ function Home() {
       <section>
         <div className="card-container">
           <div className="card">
-            <h2>Testty</h2>
+            <h2>The Steel Works Series</h2>
             <p>
               Purpose-led smarter steel thinking, insight and podcasts for
               people and <br />
