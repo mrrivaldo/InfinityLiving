@@ -1,0 +1,11 @@
+.strategy-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 30rem 20rem 30rem;
+}
+
+.strategy-container p {
+  margin-top: 2rem;
+  font-size: 18px;
+}

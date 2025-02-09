@@ -35,10 +35,13 @@ function Header() {
       }`}
     >
       <div className="logo">
-        <img
-          src={isNavHovered ? "/logo-black.png" : "/logo-white.png"}
-          alt="INFINITY LIVING"
-        />
+        <NavLink to="/">
+          <img
+            src={isNavHovered ? "/logo-black.png" : "/logo-white.png"}
+            alt="INFINITY LIVING"
+            style={{ cursor: "pointer" }} // Membuat logo terlihat bisa diklik
+          />
+        </NavLink>
       </div>
       <nav>
         <ul className={`nav-links ${isMenuOpen ? "open" : ""}`}>
@@ -47,7 +50,7 @@ function Header() {
             onMouseEnter={() => setIsNavHovered(true)}
             onMouseLeave={() => setIsNavHovered(false)}
           >
-            <NavLink to="/About">About</NavLink>
+            <NavLink to="/about">About</NavLink>
             <div className="submenu">
               <div className="submenu-content">
                 <div className="submenu-left">
@@ -56,21 +59,23 @@ function Header() {
                     Meet the world's leading <br /> light gauge steel
                     manufacturer and builder
                   </p>
-                  <a href="">
+                  <NavLink to="/about">
                     <u>Go to About page</u>
-                  </a>
+                  </NavLink>
                 </div>
                 <div id="submenu-links">
-                  <a href="#">Our purpose</a>
-                  <a href="#">Our values</a>
-                  <a href="#">Our culture</a>
-                  <a href="#">Strategy</a>
-                  <a href="#">Leadership</a>
-                  <a href="#">Research & Development</a>
-                  <a href="#">Health & Safety</a>
-                  <a href="#">Supplier</a>
-                  <a href="#">Making steel</a>
-                  <a href="#">FAQ</a>
+                  <NavLink to="/about/our-purpose">Our purpose</NavLink>
+                  <NavLink to="/about/our-value">Our values</NavLink>
+                  <NavLink to="/about/our-culture">Our culture</NavLink>
+                  <NavLink to="/about/our-strategy">Strategy</NavLink>
+                  <NavLink to="/about/leadership">Leadership</NavLink>
+                  <NavLink to="/about/research-development">
+                    Research & Development
+                  </NavLink>
+                  <NavLink to="/about/health-safety">Health & Safety</NavLink>
+                  <NavLink to="/about/supplier">Supplier</NavLink>
+                  <NavLink to="/about/making-steel">Making steel</NavLink>
+                  <NavLink to="/about/faq">FAQ</NavLink>
                 </div>
               </div>
             </div>
