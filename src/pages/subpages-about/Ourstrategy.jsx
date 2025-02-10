@@ -2,11 +2,13 @@ import React from "react";
 import HeroImage from "../../components/HeroImage";
 import Footer from "../../components/Footer";
 import "./Ourstrategy.css";
+import Header from "../../components/Header";
 function Ourstrategy() {
   return (
     <div>
+      <Header />
       <HeroImage
-        title="Our purpose: Smarter<br>steels for people and<br>planet"
+        title="Strategy"
         subtitle=""
         breadcrumb={["Homepage", "About"]}
         backgroundImage="/black.jpg"
