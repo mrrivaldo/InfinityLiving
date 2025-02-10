@@ -1,6 +1,7 @@
 .article-section {
     display: flex;
     justify-content: center; /* Membuat container berada di tengah layar */
+    
   }
   
   .article-content {

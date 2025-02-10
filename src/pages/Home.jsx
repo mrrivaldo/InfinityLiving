@@ -56,7 +56,7 @@ function Home() {
       />
       <section>
         <div className="card-container">
-          <div className="card">
+          <div className="card1">
             <h2>The Steel Works Series</h2>
             <p>
               Purpose-led smarter steel thinking, insight and podcasts for
@@ -71,8 +71,8 @@ function Home() {
             </a>
           </div>
 
-          <div className="card">
-            <h2>Smarter steels for people and planet</h2>
+          <div className="card2">
+            <h2>Smarter steel for people and planet</h2>
             <p>
               Our commitment to making steel integral to a sustainable,
               low-carbon <br />
@@ -84,13 +84,13 @@ function Home() {
             </a>
           </div>
 
-          <div className="card">
-            <h2>ArcelorMittal Multi Part Integration® </h2>
+          <div className="card3">
+            <h2>Infinity Living Multi Part Integration® </h2>
             <p>
               In a rapidly evolving automotive industry, flexibility wins.
               ArcelorMittal Multi <br />
               Part Integration® maximises automotive manufacturers’ ability to
-              adapt <br />
+              adapt
               through the power of less: less parts, less process, less floor
               space, less time, less materials, less CO₂ and less assembly cost.
               Harness the strength of steel and the power of less.
@@ -110,7 +110,7 @@ function Home() {
           </div>
           <div className="info-desc">
             <h2>
-              ArcelorMittal reports fourth <br />
+              Infinity reports fourth <br />
               quarter and full year 2024 <br />
               results
             </h2>
@@ -179,7 +179,7 @@ function Home() {
         />
       </section>
 
-      <section>
+      {/* <section>
         <div className="report-container">
           <div className="report-info">
             <h1>
@@ -194,7 +194,7 @@ function Home() {
             <Button text="Corporate Library" />
           </div>
         </div>
-      </section>
+      </section> */}
 
       <BackToTop />
       <Footer />

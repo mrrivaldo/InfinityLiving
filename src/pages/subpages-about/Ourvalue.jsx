@@ -4,6 +4,7 @@ import "./Ourvalue.css";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import HeroImage from "../../components/HeroImage";
+import Footer from "../../components/Footer";
 
 function Ourvalue() {
   return (
@@ -51,7 +52,7 @@ function Ourvalue() {
               <div className="image-content">
                 {" "}
                 {/* Kontainer untuk gambar */}
-                <img src="/path/to/image1.jpg" alt="Safety" />
+                <img src="../public/safety.webp" alt="Safety" />
               </div>
             </div>
           </div>
@@ -63,7 +64,7 @@ function Ourvalue() {
               <div className="image-content">
                 {" "}
                 {/* Kontainer untuk gambar */}
-                <img src="/path/to/image1.jpg" alt="Safety" />
+                <img src="../public/sustainn.jpg" alt="Sustainn" />
               </div>
             </div>
             <div className="value-item">
@@ -119,7 +120,7 @@ function Ourvalue() {
               <div className="image-content">
                 {" "}
                 {/* Kontainer untuk gambar */}
-                <img src="/path/to/image1.jpg" alt="Safety" />
+                <img src="../public/quality.jpeg" alt="Safety" />
               </div>
             </div>
           </div>
@@ -131,7 +132,7 @@ function Ourvalue() {
               <div className="image-content">
                 {" "}
                 {/* Kontainer untuk gambar */}
-                <img src="/path/to/image1.jpg" alt="Safety" />
+                <img src="../public/leader.jpg" alt="Safety" />
               </div>
             </div>
             <div className="value-item">
@@ -184,12 +185,16 @@ function Ourvalue() {
               <div className="image-content">
                 {" "}
                 {/* Kontainer untuk gambar */}
-                <img src="/path/to/image1.jpg" alt="Safety" />
+                <img src="../public/curious.jpg" alt="Safety" />
               </div>
             </div>
           </div>
         </div>
+        
       </section>
+
+      <Footer />
+      
     </div>
   );
 }

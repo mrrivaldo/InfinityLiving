@@ -42,7 +42,7 @@ html {
   grid-template-columns: repeat(3, 1fr); /* 2 kolom */
   /* height: 10vh; */
   
-  width: 70vw;
+  width: 80vw;
   margin: 0 auto; /* Untuk membuat grid container berada di tengah halaman */
   grid-gap: 20px; /* Spasi antar grid item */
   padding: 20px;

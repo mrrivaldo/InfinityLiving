@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Header from "../../components/Header";
+import HeroImage from "../../components/HeroImage";
 import "./Supplier.css";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
@@ -8,12 +9,13 @@ function Supplier() {
   return (
     <div>
       <Header />
-      <div class="hero-section">
-        <img src="public\sci.jpg" alt="Gambar Hero" />
-        <div class="hero-content">
-          <h1>Supplier</h1>
-        </div>
-      </div>
+      <HeroImage
+              title="Supplier"
+              subtitle=""
+              breadcrumb={["Homepage", "About"]}
+              backgroundImage="../public/headersupp.jpeg"
+            />
+     
 
       <section class="article-section">
         <div class="article-content">
