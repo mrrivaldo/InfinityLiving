@@ -76,9 +76,6 @@ function OurPurpose() {
       description:
         "Built on innovation and driven by excellence, we are shaping the future of steel-framed construction. With a vision beyond today, we engineer solutions that stand the test of time—creating stronger, smarter, and more sustainable spaces. Propelled by progress, we think in decades, not days. Constantly striving for better, our work is never finished",
     },
-
-    
-    
   ];
   return (
     <>
@@ -87,7 +84,7 @@ function OurPurpose() {
         title="Our purpose: Smarter<br>steels for people and<br>planet"
         subtitle=""
         breadcrumb={["Homepage", "About"]}
-        backgroundImage="../public/headerpurpose.webp"
+        backgroundImage="/headerpurpose.webp"
       />
       <section>
         <div className="purpose-container">
