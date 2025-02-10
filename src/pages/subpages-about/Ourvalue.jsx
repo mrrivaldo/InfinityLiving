@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Header from "../../components/Header";
-import "./Ourvalue.css";
+import "./ourvalue.css";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import HeroImage from "../../components/HeroImage";
