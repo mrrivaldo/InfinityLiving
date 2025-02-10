@@ -40,9 +40,11 @@ html {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 2 kolom */
+
   /* height: 10vh; */
   
   width: 80vw;
+
   margin: 0 auto; /* Untuk membuat grid container berada di tengah halaman */
   grid-gap: 20px; /* Spasi antar grid item */
   padding: 20px;
@@ -52,7 +54,9 @@ html {
   border: 3px solid #ccc; /* Garis tepi (opsional) */
   padding: 20px;
   text-align: center; /* Teks rata tengah */
+
   height: 190px !important; /* Tinggi kotak (bisa disesuaikan) */
+
   display: flex;
   flex-direction: column;
   justify-content: center; /* Vertikal tengah */

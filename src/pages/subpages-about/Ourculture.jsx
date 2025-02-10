@@ -4,7 +4,10 @@ import "./Ourculture.css";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import HeroImage from "../../components/HeroImage";
+
 import Footer from "../../components/Footer";
+
+
 
 function Ourculture() {
   return (
@@ -41,6 +44,7 @@ function Ourculture() {
       </section>
 
       <Footer />
+
     </div>
   );
 }
