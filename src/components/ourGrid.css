@@ -8,7 +8,6 @@
   gap: 20px;
   padding: 40px;
   background-color: #f9f9f9;
-  /* border: none; */
   align-items: start;
 }
 
@@ -31,12 +30,12 @@
   height: auto;
   display: block;
   border-radius: 8px;
-  object-fit: contain; /* Memastikan gambar tetap proporsional */
+  object-fit: cover; /* Memastikan gambar tetap proporsional */
 }
 
 .text {
   font-family: "Georgia", serif;
-  padding: 0px;
+  padding: 20px;
   color: #333;
 }
 

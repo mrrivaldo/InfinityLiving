@@ -10,12 +10,11 @@ function Supplier() {
     <div>
       <Header />
       <HeroImage
-              title="Supplier"
-              subtitle=""
-              breadcrumb={["Homepage", "About"]}
-              backgroundImage="../public/headersupp.jpeg"
-            />
-     
+        title="Supplier"
+        subtitle=""
+        breadcrumb={["Homepage", "About"]}
+        backgroundImage="/headersupp.jpeg"
+      />
 
       <section class="article-section">
         <div class="article-content">

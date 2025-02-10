@@ -10,24 +10,21 @@ function Ourstrategy() {
     <div>
       <Header />
       <HeroImage
-
         title="Strategy"
         subtitle=""
         breadcrumb={["Homepage", "About"]}
-        backgroundImage="/black.jpg"
-
+        backgroundImage="/headerculture.jpg"
       />
 
       <section>
         <div className="strategy-container">
           <h2>
-
             Our strategy is designed to establish and maintain our position as a
             leader in light gauge steel manufacturing and modern construction.
             In an industry where efficiency, sustainability, and technological
             advancements are shaping the future, we remain committed to
             delivering high-quality steel solutions that transform the way homes
-            and buildings are designed and built.{" "}
+            and buildings are designed and built.
           </h2>
           <p>
             As global demand for durable and sustainable building materials
@@ -117,7 +114,6 @@ function Ourstrategy() {
             beyond today, embracing innovation, and maintaining an unwavering
             commitment to quality, we are not just manufacturing steel frames—we
             are shaping the future of construction.
-
           </p>
         </div>
       </section>

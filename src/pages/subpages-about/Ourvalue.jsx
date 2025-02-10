@@ -52,7 +52,7 @@ function Ourvalue() {
               <div className="image-content">
                 {" "}
                 {/* Kontainer untuk gambar */}
-                <img src="../public/safety.webp" alt="Safety" />
+                <img src="/safety.webp" alt="Safety" />
               </div>
             </div>
           </div>
@@ -64,7 +64,7 @@ function Ourvalue() {
               <div className="image-content">
                 {" "}
                 {/* Kontainer untuk gambar */}
-                <img src="../public/sustainn.jpg" alt="Sustainn" />
+                <img src="/sustainn.jpg" alt="Sustainn" />
               </div>
             </div>
             <div className="value-item">
@@ -120,7 +120,7 @@ function Ourvalue() {
               <div className="image-content">
                 {" "}
                 {/* Kontainer untuk gambar */}
-                <img src="../public/quality.jpeg" alt="Safety" />
+                <img src="/quality.jpeg" alt="Safety" />
               </div>
             </div>
           </div>
@@ -132,7 +132,7 @@ function Ourvalue() {
               <div className="image-content">
                 {" "}
                 {/* Kontainer untuk gambar */}
-                <img src="../public/leader.jpg" alt="Safety" />
+                <img src="/leader.jpg" alt="Safety" />
               </div>
             </div>
             <div className="value-item">
@@ -185,16 +185,14 @@ function Ourvalue() {
               <div className="image-content">
                 {" "}
                 {/* Kontainer untuk gambar */}
-                <img src="../public/curious.jpg" alt="Safety" />
+                <img src="/curious.jpg" alt="Safety" />
               </div>
             </div>
           </div>
         </div>
-        
       </section>
 
       <Footer />
-      
     </div>
   );
 }
