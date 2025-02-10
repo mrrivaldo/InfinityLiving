@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import parse from "react-html-parser"; // Import react-html-parser
+import parse from "react-html-parser";
 import "./FAQ.css";
 
 const FAQ = ({ title, data }) => {
