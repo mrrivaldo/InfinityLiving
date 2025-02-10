@@ -4,7 +4,9 @@ import "./Ourculture.css";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import HeroImage from "../../components/HeroImage";
+
 import Footer from "../../components/Footer";
+
 
 function Ourculture() {
   return (
@@ -16,6 +18,7 @@ function Ourculture() {
         breadcrumb={["Homepage", "About"]}
         backgroundImage="/sci.jpg"
       />
+
 
       <section class="article-section">
         <div class="article-content">
@@ -41,6 +44,7 @@ function Ourculture() {
       </section>
 
       <Footer />
+
     </div>
   );
 }

@@ -9,6 +9,9 @@ import Ourvalue from "./pages/subpages-about/Ourvalue";
 import Supplier from "./pages/subpages-about/Supplier";
 import Ourstrategy from "./pages/subpages-about/Ourstrategy";
 import Ourculture from "./pages/subpages-about/Ourculture";
+
+import OurFAQ from "./pages/subpages-about/OurFAQ";
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -35,6 +38,9 @@ function App() {
             <Route path="/about/our-culture" element={<Ourculture />} />
             <Route path="/about/our-purpose" element={<OurPurpose />} />
             <Route path="/about/supplier" element={<Supplier />} />
+
+            <Route path="/about/faq" element={<OurFAQ />} />
+
           </Routes>
         </Router>
       )}

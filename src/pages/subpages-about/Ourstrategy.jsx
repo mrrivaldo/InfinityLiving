@@ -1,22 +1,27 @@
 import React from "react";
+
 import Header from "../../components/Header";
 import HeroImage from "../../components/HeroImage";
 import Footer from "../../components/Footer";
 import "./Ourstrategy.css";
+
 function Ourstrategy() {
   return (
     <div>
       <Header />
       <HeroImage
-        title="Our purpose: Smarter<br>steels for people and<br>planet"
+
+        title="Strategy"
         subtitle=""
         breadcrumb={["Homepage", "About"]}
-        backgroundImage="../public/headerculture.jpg"
+        backgroundImage="/black.jpg"
+
       />
 
       <section>
         <div className="strategy-container">
           <h2>
+
             Our strategy is designed to establish and maintain our position as a
             leader in light gauge steel manufacturing and modern construction.
             In an industry where efficiency, sustainability, and technological
@@ -112,6 +117,7 @@ function Ourstrategy() {
             beyond today, embracing innovation, and maintaining an unwavering
             commitment to quality, we are not just manufacturing steel frames—we
             are shaping the future of construction.
+
           </p>
         </div>
       </section>

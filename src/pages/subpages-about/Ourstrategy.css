@@ -2,14 +2,17 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   max-width: 960px;
   margin: 100px auto;
   padding: 0 20px;
+
 
 }
 
 .strategy-container p {
   margin-top: 2rem;
+
   font-size: 15px;
 }
 
@@ -31,3 +34,4 @@
       grid-template-columns: 1fr; /* tetap 1 kolom */
   }
 }
+
