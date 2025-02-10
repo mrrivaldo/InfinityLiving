@@ -43,22 +43,42 @@ function OurPurpose() {
     },
     {
       type: "text",
-      title: "We make impact at scale.",
+      title: "Make Dreams Possible",
+      description: "For everyone, everywhere, every day.",
+    },
+    {
+      type: "text",
+      title: "We Make Impact at Scale.",
       description:
-        "We bring speed, clarity, and purpose in solving more challenges. Together, we unlock new possibilities that fuel human ambition.",
+        "We build stronger futures, creating innovative steel solutions that turn visions into reality. We think bigger, chart unique paths and bring more dreams within reach for those we serve. Through precision engineering and smart construction, we make high-quality homes more accessible, efficient, and sustainable. Together, we and work to uncover solutions that change lives, enhance communities, expand opportunities, and deliver lasting value—one frame at a time",
+    },
+
+    {
+      type: "text",
+      title: "Make Dreams Possible",
+      description: "For everyone, everywhere, every day.",
     },
     {
       type: "text",
       title: "We are global.",
       description:
-        "We leverage reach, opportunities, and talent to drive innovations that empower people and organizations worldwide.",
+        "We build beyond boundaries. We help unlock opportunities of all kinds, for more and more  people and organizations around the world. Our precision-engineered steel solutions create opportunities for families, businesses, and communities—turning dreams into durable, sustainable realities. From neighborhoods to nations, we support growth, innovation, and the vision of a stronger, more accessible future for all.",
+    },
+
+    {
+      type: "text",
+      title: "Make Dreams Possible",
+      description: "For everyone, everywhere, every day.",
     },
     {
       type: "text",
-      title: "We are relentless.",
+      title: "We Are Relentless.",
       description:
-        "For more than 200 years, we’ve been an unstoppable force, continuously evolving and setting new industry standards.",
+        "Built on innovation and driven by excellence, we are shaping the future of steel-framed construction. With a vision beyond today, we engineer solutions that stand the test of time—creating stronger, smarter, and more sustainable spaces. Propelled by progress, we think in decades, not days. Constantly striving for better, our work is never finished",
     },
+
+    
+    
   ];
   return (
     <>
@@ -67,7 +87,7 @@ function OurPurpose() {
         title="Our purpose: Smarter<br>steels for people and<br>planet"
         subtitle=""
         breadcrumb={["Homepage", "About"]}
-        backgroundImage="/black.jpg"
+        backgroundImage="../public/headerpurpose.webp"
       />
       <section>
         <div className="purpose-container">

@@ -2,10 +2,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 3rem 30rem 20rem 30rem;
+  padding: 3rem 17rem 20rem 17rem;
 }
 
 .purpose-container p {
   margin-top: 2rem;
   font-size: 18px;
+  
 }
+

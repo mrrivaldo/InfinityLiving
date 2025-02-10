@@ -2,10 +2,36 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 3rem 30rem 20rem 30rem;
+
+  max-width: 960px;
+  margin: 100px auto;
+  padding: 0 20px;
+
+
 }
 
 .strategy-container p {
   margin-top: 2rem;
-  font-size: 18px;
+
+  font-size: 15px;
 }
+
+.strategy-section { /* Nama class section yang lebih deskriptif */
+  padding: 40px 0;
+  background-color: #f5f5dc; /* Warna krem */
+  /* margin-top: -90px;  Hapus atau sesuaikan jika diperlukan */
+}
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .strategy-grid {
+      grid-template-columns: 1fr; /* tetap 1 kolom */
+  }
+}
+

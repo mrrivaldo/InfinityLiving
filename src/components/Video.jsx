@@ -19,13 +19,13 @@ function Video({ videoSrc, phrases }) {
         src={videoSrc}
         autoPlay
         loop
-        muted
+        
         style={{
           position: "absolute",
           top: "-175px",
           left: "0",
           width: "100%",
-          height: "80%",
+          height: "90%",
           objectFit: "cover",
           filter: "brightness(60%)",
         }}
