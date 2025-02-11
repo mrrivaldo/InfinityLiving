@@ -47,7 +47,7 @@ function Home() {
     <>
       <Header />
       <Video
-        videoSrc="/video.mp4"
+        videoSrc="/public/video.mp4"
         phrases={[
           "Making Dreams Possible",
           "Powered by Imagination",
@@ -57,13 +57,10 @@ function Home() {
       <section>
         <div className="card-container">
           <div className="card1">
-            <h2>The Steel Works Series</h2>
+            <h2>Speed & Efficiency</h2>
             <p>
-              Purpose-led smarter steel thinking, insight and podcasts for
-              people and <br />
-              planet. The Steel Works series captures the latest
-              thought-provoking and <br />
-              behind the scenes content from the people behind our business.
+              Our factory-produced LGS frames arrive ready to assemble, saving
+              you time, labor, and headaches on-site.
             </p>
 
             <a id="card-link" href="">
@@ -72,11 +69,12 @@ function Home() {
           </div>
 
           <div className="card2">
-            <h2>Smarter steel for people and planet</h2>
+            <h2>Unmatched Durability & Eco-Friendly</h2>
             <p>
-              Our commitment to making steel integral to a sustainable,
-              low-carbon <br />
-              economy
+              Steel structures resist corrosion, pests, and extreme
+              weather—providing stability you can count on for decades.
+              Precision manufacturing means less waste, reduced materials, and a
+              cleaner construction footprint.
             </p>
 
             <a id="card-link" href="">
@@ -85,15 +83,10 @@ function Home() {
           </div>
 
           <div className="card3">
-            <h2>Infinity Living Multi Part Integration® </h2>
+            <h2>Versatile & Customizable</h2>
             <p>
-              In a rapidly evolving automotive industry, flexibility wins.
-              ArcelorMittal Multi <br />
-              Part Integration® maximises automotive manufacturers’ ability to
-              adapt
-              through the power of less: less parts, less process, less floor
-              space, less time, less materials, less CO₂ and less assembly cost.
-              Harness the strength of steel and the power of less.
+              From modern homes to commercial complexes, our design-forward
+              approach adapts to your style and needs.
             </p>
 
             <a id="card-link" href="">
@@ -106,19 +99,19 @@ function Home() {
       <section>
         <div className="info-container">
           <div className="info-img">
-            <img src="/dummy2.jpg" alt="" />
+            <img src="/panel.png" alt="" />
           </div>
           <div className="info-desc">
-            <h2>
-              Infinity reports fourth <br />
-              quarter and full year 2024 <br />
-              results
-            </h2>
-            <p>February 6, 2025</p>
+            <h2>Ready to Build Smarter?</h2>
+            <p>
+              Experience the future of construction with Infinity Living.
+              Contact us today for a no-obligation quote and unlock infinite
+              possibilities for your next project.
+            </p>
             <Button text="Find Out More" />
 
             <p id="info-desc-link">Related Links</p>
-            <a href="">Access the analyst conference call</a>
+            {/* <a href="">Access the analyst conference call</a> */}
           </div>
         </div>
       </section>
@@ -127,22 +120,18 @@ function Home() {
         <div className="info-container-2">
           <div className="info-desc-2">
             <h2>
-              ArcelorMittal to move <br />
-              forward with construction of <br />
-              a new, world-class electrical <br />
-              steel facility in Alabama
+              At Infinity Living
             </h2>
             <p>
-              February 6, Schererville, IN: ArcelorMittal announced that it is{" "}
-              <br />
-              proceeding with plans to build an advanced, non-grain-oriented{" "}
-              <br />
-              electrical steel (NOES) manufacturing facility in Alabama.
+            we believe in building spaces that stand the
+              test of time—quickly, safely, and sustainably. Our prefabricated
+              Light Gauge Steel (LGS) technology streamlines the construction
+              process, delivering cutting-edge quality and design flexibility.
             </p>
             <Button text="Find Out More" />
           </div>
           <div className="info-img">
-            <img src="/dummy2.jpg" alt="" />
+            <img src="/panel22.png" alt="" />
           </div>
         </div>
       </section>
