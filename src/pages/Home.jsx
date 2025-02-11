@@ -47,7 +47,7 @@ function Home() {
     <>
       <Header />
       <Video
-        videoSrc="/public/video.mp4"
+        videoSrc="/video.mp4"
         phrases={[
           "Making Dreams Possible",
           "Powered by Imagination",
@@ -119,14 +119,12 @@ function Home() {
       <section>
         <div className="info-container-2">
           <div className="info-desc-2">
-            <h2>
-              At Infinity Living
-            </h2>
+            <h2>At Infinity Living</h2>
             <p>
-            we believe in building spaces that stand the
-              test of time—quickly, safely, and sustainably. Our prefabricated
-              Light Gauge Steel (LGS) technology streamlines the construction
-              process, delivering cutting-edge quality and design flexibility.
+              we believe in building spaces that stand the test of time—quickly,
+              safely, and sustainably. Our prefabricated Light Gauge Steel (LGS)
+              technology streamlines the construction process, delivering
+              cutting-edge quality and design flexibility.
             </p>
             <Button text="Find Out More" />
           </div>
