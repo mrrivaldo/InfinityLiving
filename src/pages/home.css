@@ -43,7 +43,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.492); /* Tingkat kegelapan overlay, bisa disesuaikan */
+  background-color: rgba(0, 0, 0, 0.618); /* Tingkat kegelapan overlay, bisa disesuaikan */
 }
 
 .card1 h2, .card2 h2, .card3 h2,
@@ -82,7 +82,7 @@
 
 /* Gambar di dalam info-container */
 .info-img img {
-  width: 800px;
+  width: 600px;
   height: auto;
   border-radius: 10px;
 }
@@ -220,7 +220,8 @@
 }
 
 .build-text h1 {
-  font-size: 7rem;
+  margin-top: 150px;
+  font-size: 6rem;
   font-weight: bold;
 }
 

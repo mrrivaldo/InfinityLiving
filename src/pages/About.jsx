@@ -48,7 +48,7 @@ function About() {
         </div>
       </div> */}
       <HeroImage
-        title="Smarter steels for people<br>and planet"
+        title="Smarter steel for people<br>and planet"
         subtitle=""
         breadcrumb={["Homepage", ""]}
         backgroundImage="../public/heroour.jpg"
