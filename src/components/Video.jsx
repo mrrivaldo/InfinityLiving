@@ -1,10 +1,11 @@
-// Video.js
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { useTypewriter } from "react-simple-typewriter";
 import "./Video.css";
 
 function Video({ videoSrc, phrases }) {
+  const videoRef = useRef(null);
+
   const [text] = useTypewriter({
     words: phrases,
     loop: true,
@@ -13,13 +14,25 @@ function Video({ videoSrc, phrases }) {
     deleteSpeed: 50,
   });
 
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.muted = true; // Ensure autoplay works
+      video.play().catch((error) => {
+        console.error("Autoplay prevented:", error);
+      });
+    }
+  }, []);
+
   return (
     <div className="video-container">
       <video
+        ref={videoRef}
         src={videoSrc}
         autoPlay
         loop
-        
+        muted
+        playsInline
         style={{
           position: "absolute",
           top: "-175px",
