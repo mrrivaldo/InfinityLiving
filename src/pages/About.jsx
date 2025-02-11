@@ -51,7 +51,7 @@ function About() {
         title="Smarter steel for people<br>and planet"
         subtitle=""
         breadcrumb={["Homepage", ""]}
-        backgroundImage="../public/heroour.jpg"
+        backgroundImage="/heroour.jpg"
       />
 
       <section class="article-section">
